@@ -27,7 +27,7 @@ class ConnectedComponent:
     def _update_classes(self, low, high):
         for x, y in self._classes:
             if y == low:
-                self._classes((x, high))
+                self._classes.add((x, high))
 
     def _get_border_img(self):
         img = np.zeros((self.bw.shape[0] + 2, self.bw.shape[1] + 2), dtype=int)
